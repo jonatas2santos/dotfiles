@@ -1,0 +1,78 @@
+[2m2025-11-26T16:07:52.278930Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general.startup_commands: Usage: wm-common <COMMAND>
+
+Commands:
+  adjust-borders            
+  close                     
+  focus                     
+  ignore                    
+  move                      
+  move-workspace            
+  position                  
+  resize                    
+  set-floating              
+  set-fullscreen            
+  set-minimized             
+  set-tiling                
+  set-title-bar-visibility  
+  set-transparency          
+  shell-exec                
+  size                      
+  toggle-floating           
+  toggle-fullscreen         
+  toggle-minimized          
+  toggle-tiling             
+  toggle-tiling-direction   
+  set-tiling-direction      
+  wm-cycle-focus            
+  wm-disable-binding-mode   
+  wm-enable-binding-mode    
+  wm-exit                   
+  wm-redraw                 
+  wm-reload-config          
+  wm-toggle-pause           
+  help                      Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+ at line 6 column 21
+[2m2025-11-26T16:10:47.621185Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m general.startup_commands: Usage: wm-common <COMMAND>
+
+Commands:
+  adjust-borders            
+  close                     
+  focus                     
+  ignore                    
+  move                      
+  move-workspace            
+  position                  
+  resize                    
+  set-floating              
+  set-fullscreen            
+  set-minimized             
+  set-tiling                
+  set-title-bar-visibility  
+  set-transparency          
+  shell-exec                
+  size                      
+  toggle-floating           
+  toggle-fullscreen         
+  toggle-minimized          
+  toggle-tiling             
+  toggle-tiling-direction   
+  set-tiling-direction      
+  wm-cycle-focus            
+  wm-disable-binding-mode   
+  wm-enable-binding-mode    
+  wm-exit                   
+  wm-redraw                 
+  wm-reload-config          
+  wm-toggle-pause           
+  help                      Print this message or the help of the given subcommand(s)
+
+Options:
+  -h, --help  Print help
+ at line 6 column 21
+[2m2025-11-27T00:48:14.091468Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 261 column 15
+[2m2025-11-27T00:50:09.079644Z[0m [31mERROR[0m [2mglazewm[0m[2m:[0m keybindings[24].commands: unrecognized subcommand
+ at line 261 column 15
