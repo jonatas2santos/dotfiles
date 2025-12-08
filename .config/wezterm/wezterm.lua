@@ -13,6 +13,9 @@ local act = wezterm.action
 -- Hyprland fix
 config.enable_wayland = false
 
+-- Disable close confirmation
+config.window_close_confirmation = 'NeverPrompt'
+
 -- This is where you actually apply your config choices.
 
 -- disable window buttons
@@ -67,6 +70,15 @@ config.initial_rows = 28
 -- Keybinds
 config.disable_default_key_bindings = true -- disable all default keybinds
 config.keys = {
+  -- yazi
+  {
+    key = 'y',
+    mods = 'CTRL|ALT',
+    action = act.SpawnCommandInNewTab {
+      cwd = wezterm.home_dir,
+      args = { 'yazi' },
+    },
+  },
   -- copy to clipboard
   {
     key = 'c',
@@ -89,14 +101,14 @@ config.keys = {
   -- new window
   {
     key = 'n',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.SpawnWindow,
   },
 
   -- toggle fullscreen
   {
     key = 'Enter',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ToggleFullScreen,
   },
 
@@ -115,14 +127,14 @@ config.keys = {
   -- show debug overlay
   {
     key = 'd',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ShowDebugOverlay,
   },
 
   -- command palette
   {
-    key = ':',
-    mods = 'CTRL|SHIFT',
+    key = ';',
+    mods = 'CTRL',
     action = act.ActivateCommandPalette,
   },
 
@@ -133,7 +145,7 @@ config.keys = {
     action = act.SplitVertical { domain = 'CurrentPaneDomain' },
   },
   {
-    key = 'h',
+    key = 'b',
     mods = 'CTRL|ALT',
     action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
   },
@@ -157,23 +169,16 @@ config.keys = {
 
   -- new tab (current directory)
   {
-    key = 't',
-    mods = 'CTRL|SHIFT',
+    key = 'c',
+    mods = 'CTRL|ALT',
     action = act.SpawnTab 'CurrentPaneDomain',
   },
 
   -- new tab
   {
-    key = 'b',
-    mods = 'CTRL|SHIFT',
+    key = 't',
+    mods = 'CTRL|ALT',
     action = act.SpawnTab 'DefaultDomain',
-  },
-
-  -- close tab
-  {
-    key = 'q',
-    mods = 'CTRL|SHIFT',
-    action = act.CloseCurrentTab { confirm = false },
   },
 
   -- close pane
@@ -183,73 +188,95 @@ config.keys = {
     action = act.CloseCurrentPane { confirm = false },
   },
 
-  -- toggle tabs
+  -- move between panes
+  {
+    key = 'h',
+    mods = 'CTRL|ALT',
+    action = act.ActivatePaneDirection 'Left',
+  },
+  {
+    key = 'j',
+    mods = 'CTRL|ALT',
+    action = act.ActivatePaneDirection 'Down',
+  },
+  {
+    key = 'k',
+    mods = 'CTRL|ALT',
+    action = act.ActivatePaneDirection 'Up',
+  },
   {
     key = 'l',
+    mods = 'CTRL|ALT',
+    action = act.ActivatePaneDirection 'Right',
+  },
+
+  -- toggle tabs
+  {
+    key = 'H',
     mods = 'CTRL|SHIFT',
     action = act.ActivateTabRelative(-1),
   },
   {
-    key = 'h',
+    key = 'L',
     mods = 'CTRL|SHIFT',
     action = act.ActivateTabRelative(1),
   },
 
   -- move tabs
   {
-    key = '{',
-    mods = 'CTRL|SHIFT',
+    key = '[',
+    mods = 'CTRL|ALT',
     action = act.MoveTabRelative(-1),
   },
   {
-    key = '}',
-    mods = 'CTRL|SHIFT',
+    key = ']',
+    mods = 'CTRL|ALT',
     action = act.MoveTabRelative(1),
   },
   -- change to a specific tab
   {
     key = '1',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(0),
   },
   {
     key = '2',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(1),
   },
   {
     key = '3',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(2),
   },
   {
     key = '4',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(3),
   },
   {
     key = '5',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(4),
   },
   {
     key = '6',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(5),
   },
   {
     key = '7',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(6),
   },
   {
     key = '8',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(7),
   },
   {
     key = '9',
-    mods = 'CTRL|SHIFT',
+    mods = 'CTRL|ALT',
     action = act.ActivateTab(-1),
   },
 }
