@@ -1,7 +1,3 @@
-# Enable colors
-autoload -U colors && colors
-setopt PROMPT_SUBST
-
 # Function: show python environment name only
 python_env() {
   if [[ -n "$VIRTUAL_ENV" ]]; then
