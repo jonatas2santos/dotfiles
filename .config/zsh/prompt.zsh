@@ -1,3 +1,11 @@
+# Boot commands
+autoload -U add-zsh-hook
+show_fetch() {
+  fastfetch
+  add-zsh-hook -d precmd show_fetch
+}
+add-zsh-hook precmd show_fetch
+
 # Function: show python environment name only
 python_env() {
   if [[ -n "$VIRTUAL_ENV" ]]; then
